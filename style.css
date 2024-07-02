@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ECF0F1;
+  color: #27AE60;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*Cor da side bar*/
+.w3-sidebar .w3-bar-item.w3-button:hover {
+  background-color: #4CAF50 !important; /* Cor de fundo verde para o hover */
+  color: white; /* Cor do texto no hover */
+}
+
+.container-fluid {
+  display: flex;
+  flex: 1;
+}
+
+.menu {
+  background-color: #2ECC71;
+  flex-shrink: 0;
+}
+
+.main-content-container {
+  flex: 1;
+  padding: 15px;
+  color: black;
+}
+
+.main-content {
+  display: none;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .menu {
+      width: 100%;
+      min-height: auto;
+  }
+  .main-content {
+      margin-top: 15px; /* Adjust if necessary */
+  }
+}
+
+/*Forms*/
+input[type=text], input[type=date], input[type=number] {
+  width: 40%;
+  padding: 8px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #4CAF50;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus, input[type=date]:focus, input[type=number]:focus {
+  border: 3px solid #555;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas de igual largura */
+  gap: 20px; /* Espaço entre as colunas */
+}
+
+.form-grid label, .form-grid input {
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  gap: 20px; /* Espaço entre as colunas */
+}
+
+.form-column {
+  flex: 1; /* Faz com que cada coluna ocupe o mesmo espaço */
+  display: flex;
+  flex-direction: column;
+}
+
+.form-column label, .form-column input {
+  width: 100%;
+}
