@@ -6,12 +6,21 @@ body {
   background-color: #ECF0F1;
   color: #27AE60;
   font-family: 'Courier New', Courier, monospace;
+  /*font-family: Arial, Helvetica, sans-serif;  do Juninho*/
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
+/* Style the header do Juninho*/
+.header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  /*font-size: 35px;*/
+} 
 
 /*Cor da side bar*/
 .w3-sidebar .w3-bar-item.w3-button:hover {
@@ -90,3 +99,44 @@ input[type=text]:focus, input[type=date]:focus, input[type=number]:focus {
 .form-column label, .form-column input {
   width: 100%;
 }
+
+/* do Juninho */ 
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+/* Fim do Juninho */ 
