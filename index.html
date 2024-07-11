@@ -41,6 +41,7 @@
                     <a href="#" class="w3-bar-item w3-button" onclick="showContent('saidaContent')">Saída</a>
                 </div>
             </div>
+<<<<<<< HEAD
     <!--<p><a href="lcaixa/index.php">Livro caixa</a></p>
     <p><a href="estoque/estoque.php">Estoque</a></p>
     <p><a href="cadastro_produto.php">Cad.Produto</a></p>
@@ -134,6 +135,86 @@
 
 <script src="script.js"></script>
 
+=======
+            <button class="w3-button w3-block w3-left-align" onclick="toggleSection('estoque')">Estoque <i class="fa fa-caret-down"></i></button>
+            <div id="estoque" class="w3-hide w3-light-green w3-card">
+                <a href="#" class="w3-bar-item w3-button" onclick="showContent('entradaContent')">Entrada</a>
+                <a href="#" class="w3-bar-item w3-button" onclick="showContent('saidaContent')">Saída</a>
+            </div>
+        </div>
+        
+        <div class="main-content-container" style="margin-left:20%;">
+            <div id="clientesContent" class="main-content">
+                <!-- Conteúdo de Clientes -->
+                <form>
+                    <div class="form-container">
+                        <div class="form-column">
+                            <label for="fname">Nome completo:</label>
+                            <input type="text" id="nome" name="nome" value="">
+                        </div>
+                        <div class="form-column">
+                            <label for="cpf">CPF:</label>
+                            <input type="text" id="cpf" name="cpf" value="000.000.000-00">
+                        </div>
+                        <div class="form-column">
+                            <label for="dataNasc">Data de nascimento:</label>
+                            <input type="date" id="dataNasc" name="dataNasc">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div id="produtosContent" class="main-content">
+                <!-- Conteúdo de Produtos -->
+                <form>
+                    <div class="form-container">
+                        <div class="form-column">
+                            <label for="pname">Product Name</label>
+                            <input type="text" id="pname" name="pname" value="Widget">
+                        </div>
+                        <div class="form-column">
+                            <label for="pcode">Product Code</label>
+                            <input type="text" id="pcode" name="pcode" value="1234">
+                        </div>
+                    </div>
+                </form>
+            </div>
+    
+            <div id="entradaContent" class="main-content">
+                <!-- Conteúdo de Entrada -->
+                <form>
+                    <div class="form-container">
+                        <div class="form-column">
+                            <label for="entryDate">Entry Date</label>
+                            <input type="date" id="entryDate" name="entryDate">
+                        </div>
+                        <div class="form-column">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" name="quantity" value="0">
+                        </div>
+                    </div>
+                </form>
+            </div>
+    
+            <div id="saidaContent" class="main-content">
+                <!-- Conteúdo de Saída -->
+                <form>
+                    <div class="form-container">
+                        <div class="form-column">
+                            <label for="exitDate">Exit Date</label>
+                            <input type="date" id="exitDate" name="exitDate">
+                        </div>
+                        <div class="form-column">
+                            <label for="quantityOut">Quantity</label>
+                            <input type="number" id="quantityOut" name="quantityOut" value="0">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+>>>>>>> 4699e9d6b487c535c7a1788099d6095518f907ff
 </body>
 </html>
 
