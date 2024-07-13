@@ -41,33 +41,18 @@
                     <a href="#" class="w3-bar-item w3-button" onclick="showContent('saidaContent')">Saída</a>
                 </div>
             </div>
-    <!--<p><a href="lcaixa/index.php">Livro caixa</a></p>
-    <p><a href="estoque/estoque.php">Estoque</a></p>
-    <p><a href="cadastro_produto.php">Cad.Produto</a></p>
-    <p><a href="cadastro_cliente.php">Cad.Cliente</a></p>
-    <p>Relatórios</p>-->
-
 
     <!--<div class="main-content-container" style="margin-left:20%;">-->
     <div id="clientesContent" class="main-content">
           <!-- Conteúdo de Clientes -->
           
+          <?php 
+      	    include 'cadastro_cliente.php';
+          ?>
     </div>
       
       <div id="produtosContent" class="main-content">
-          <!-- Cadastro de Produtos 
-          <form>
-              <div class="form-container">
-                  <div class="form-column">
-                      <label for="pname">Product Name</label>
-                      <input type="text" id="pname" name="pname" value="Widget">
-                  </div>
-                  <div class="form-column">
-                      <label for="pcode">Product Code</label>
-                      <input type="text" id="pcode" name="pcode" value="1234">
-                  </div>
-              </div>
-          </form>-->
+          <!-- Cadastro de Produtos -->
 
           <?php 
       	    include 'cadastro_produto.php';

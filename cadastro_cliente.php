@@ -5,7 +5,6 @@
           Cadastro de Cliente
         </span>
 
-
         <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Celular">
           <span class="label-input100">Celular: *</span>
           <input class="input100" type="text" name="cli_celular" placeholder="(DD) 99999-9999" id="celular" onblur="busca_cliente(this.value);">
@@ -13,7 +12,7 @@
 
         <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Nomefantasia">
           <span class="label-input100">Nome fantasia: *</span>
-          <input class="input100" type="text" name="cli_Nomefantasia" placeholder="Nomefantasia" id="cli_Nomefantasia">
+          <input class="input100" type="text" name="cli_fantasia" placeholder="Nomefantasia" id="cli_fantasia">
         </div>
 
         <div class="wrap-input100 validate-input bg1" data-validate="precisa preencher a razão social">
@@ -55,7 +54,7 @@
 
         <div class="wrap-input100 validate-input bg1">
           <span class="label-input100">Endereço: </span>
-          <input class="input100" type="text" name="cli_end" id="rua" placeholder="Nome do logradouro">
+          <input class="input100" type="text" name="cli_endereco" id="rua" placeholder="Nome do logradouro">
         </div>
 
         <div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
@@ -87,8 +86,5 @@
           </button>
         </div>
 
-        
-
-      </form>
     </div>
   </div>

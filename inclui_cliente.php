@@ -9,19 +9,20 @@
 	require_once('db.class.php');
 
 	$cli_celular		= $_POST['cli_celular'];
-	$cli_nome 			= $_POST['cli_nome'];
+	$cli_fantasia		= $_POST['cli_fantasia'];
 	$cli_razao			= $_POST['cli_razao'];
+	$cli_nome 			= $_POST['cli_nome'];
+	$cli_telefone		= $_POST['cli_telefone'];
 	$cli_email			= $_POST['cli_email'];
-	$cli_end 			= $_POST['cli_end'];
+	$cli_cep 			= $_POST['cli_cep'];
+	$cli_endereco		= $_POST['cli_endereco'];
 	$cli_end_numero 	= $_POST['cli_end_numero'];
 	$cli_complemento 	= $_POST['cli_complemento'];
 	$cli_end_bairro		= $_POST['cli_end_bairro'];
-	$cli_cep 			= $_POST['cli_cep'];
 	$cli_cidade			= $_POST['cli_cidade'];
 	$cli_estado			= $_POST['cli_estado'];
 	$cli_nascimento		= $_POST['cli_nascimento'];
-	$cli_apelido		= $_POST['cli_apelido'];
-	$cli_categoria		= "PADRÃO";
+	$cli_contrato		= 1;
 	//$_POST['cli_categoria'];
 
 
@@ -33,7 +34,8 @@
 			$link = $objDb->conecta_mysql();
 
 			//gravando CLIENTE
-			$sql = " INSERT INTO clientes( cli_celular, cli_nome, cli_razao, cli_cep, cli_end, cli_end_numero, cli_end_bairro, cli_cidade, cli_estado, cli_complemento, cli_nascimento, cli_categoria, cli_email) VALUES ('$cli_celular', '$cli_apelido', '$cli_nome', '$cli_telefone', '$cli_cep', '$cli_end', '$cli_end_numero', '$cli_end_bairro', '$cli_cidade', '$cli_estado', '$cli_complemento', '$data', '$cli_categoria', '$cli_email') ";
+			$sql = " INSERT INTO cliente( cli_celular, cli_fantasia, cli_razao, cli_nome, cli_telefone, cli_email, cli_cep, cli_endereco, cli_end_numero, cli_end_bairro, cli_cidade, cli_uf, cli_complemento, cli_data_nascimento, cli_contrato)
+								VALUES ('$cli_celular', '$cli_fantasia', '$cli_razao', '$cli_nome', '$cli_telefone', '$cli_email', '$cli_cep', '$cli_endereco', '$cli_end_numero', '$cli_end_bairro', '$cli_cidade', '$cli_estado', '$cli_complemento', '$data', $cli_contrato) ";
 			
 			var_dump($sql);
 			mysqli_query($link, $sql);
