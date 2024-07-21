@@ -22,7 +22,7 @@
 	$cli_cidade			= $_POST['cli_cidade'];
 	$cli_estado			= $_POST['cli_estado'];
 	$cli_nascimento		= $_POST['cli_nascimento'];
-	$cli_contrato		= 1;
+	$cli_ativo		= 1;
 	//$_POST['cli_categoria'];
 
 
@@ -34,12 +34,12 @@
 			$link = $objDb->conecta_mysql();
 
 			//gravando CLIENTE
-			$sql = " INSERT INTO cliente( cli_celular, cli_fantasia, cli_razao, cli_nome, cli_telefone, cli_email, cli_cep, cli_endereco, cli_end_numero, cli_end_bairro, cli_cidade, cli_uf, cli_complemento, cli_data_nascimento, cli_contrato)
-								VALUES ('$cli_celular', '$cli_fantasia', '$cli_razao', '$cli_nome', '$cli_telefone', '$cli_email', '$cli_cep', '$cli_endereco', '$cli_end_numero', '$cli_end_bairro', '$cli_cidade', '$cli_estado', '$cli_complemento', '$data', $cli_contrato) ";
+			$sql = " INSERT INTO cliente( cli_celular, cli_fantasia, cli_razao, cli_nome, cli_telefone, cli_email, cli_cep, cli_endereco, cli_end_numero, cli_end_bairro, cli_cidade, cli_uf, cli_complemento, cli_data_nascimento, cli_ativo)
+								VALUES ('$cli_celular', '$cli_fantasia', '$cli_razao', '$cli_nome', '$cli_telefone', '$cli_email', '$cli_cep', '$cli_endereco', '$cli_end_numero', '$cli_end_bairro', '$cli_cidade', '$cli_estado', '$cli_complemento', '$data', $cli_ativo) ";
 			
-			var_dump($sql);
+			//var_dump($sql);
 			mysqli_query($link, $sql);
 
-			//header('Location: home.php?erro=1');
+			header('Location: home.php?erro=1');
 
 ?>

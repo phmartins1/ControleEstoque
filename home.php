@@ -40,17 +40,29 @@
                     <a href="#" class="w3-bar-item w3-button" onclick="showContent('entradaContent')">Entrada</a>
                     <a href="#" class="w3-bar-item w3-button" onclick="showContent('saidaContent')">Saída</a>
                 </div>
+                <a href="#" class="w3-bar-item w3-button" onclick="showContent('listaClienteContent')">Lista Cliente</a>
             </div>
 
     <!--<div class="main-content-container" style="margin-left:20%;">-->
+     <!-- Conteúdo de CLIENTES -->
     <div id="clientesContent" class="main-content">
-          <!-- Conteúdo de Clientes -->
+         
           
           <?php 
       	    include 'cadastro_cliente.php';
           ?>
     </div>
-      
+    
+    <div id="clientesContent" class="main-content">
+          
+          
+          <?php 
+      	    include 'lista_cliente.php';
+          ?>
+    </div>
+    <!-- Conteúdo de Clientes ATÉ AQUI-->
+
+
       <div id="produtosContent" class="main-content">
           <!-- Cadastro de Produtos -->
 
@@ -90,11 +102,6 @@
               </div>
           </form>
       </div>
-
-
-
-
-
 
 
   <div class="column middle" style="background-color:#bbb;">dashboard</div>
