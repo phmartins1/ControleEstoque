@@ -1,200 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
-<title>Lider</title>
 
-<!-- trecho do Pedro -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lider</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<!-- trecho do Pedro até aqui-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Login</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
-<body>
 
-<h2>Sistema lider</h2>
-<p>Bem vindo ao sistema de controle de negócios, simples e seguro, rápido e fácil</p>
-<p>Controle seu negócio sem burocracia!</p>
+<body class="bg-gradient-primary">
 
-<div class="header">
-  <h2>Lider</h2>
-    <h6>Jesus manso e humilde de coração.Fazei o nosso coração semelhante ao Vosso!</h6>
-</div>
+    <div class="container">
 
-<div class="row">
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
 
-            <div class="column side w3-light-green w3-card">
-                <h4>Menu</h4>
-                <a href="#" class="w3-bar-item w3-button" onclick="hideAllContent()">Home</a>
-                <button class="w3-button w3-block w3-left-align" onclick="toggleSection('cadastroClientes')">Cadastro <i class="fa fa-caret-down"></i></button>
-                <div id="cadastroClientes" class="w3-hide w3-light-green w3-card">
-                    <a href="#" class="w3-bar-item w3-button" onclick="showContent('clientesContent')">Clientes</a>
-                    <a href="#" class="w3-bar-item w3-button" onclick="showContent('produtosContent')">Produtos</a>
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Bem-Vindo de Volta!</h1>
+                                    </div>
+                                    <form class="user">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control form-control-user"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="E-mail">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user"
+                                                id="exampleInputPassword" placeholder="Senha">
+                                        </div>
+                                        <a href="home.php" class="btn btn-primary btn-user btn-block">
+                                            Login
+                                        </a>
+                                        
+                                    </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="forgot-password.html">Esqueci minha senha?</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button class="w3-button w3-block w3-left-align" onclick="toggleSection('estoque')">Estoque <i class="fa fa-caret-down"></i></button>
-                <div id="estoque" class="w3-hide w3-light-green w3-card">
-                    <a href="#" class="w3-bar-item w3-button" onclick="showContent('entradaContent')">Entrada</a>
-                    <a href="#" class="w3-bar-item w3-button" onclick="showContent('saidaContent')">Saída</a>
-                </div>
+
             </div>
-    <!--<p><a href="lcaixa/index.php">Livro caixa</a></p>
-    <p><a href="estoque/estoque.php">Estoque</a></p>
-    <p><a href="cadastro_produto.php">Cad.Produto</a></p>
-    <p><a href="cadastro_cliente.php">Cad.Cliente</a></p>
-    <p>Relatórios</p>-->
 
-
-    <!--<div class="main-content-container" style="margin-left:20%;">-->
-    <div id="clientesContent" class="main-content">
-          <!-- Conteúdo de Clientes -->
-          
-    </div>
-      
-      <div id="produtosContent" class="main-content">
-          <!-- Cadastro de Produtos 
-          <form>
-              <div class="form-container">
-                  <div class="form-column">
-                      <label for="pname">Product Name</label>
-                      <input type="text" id="pname" name="pname" value="Widget">
-                  </div>
-                  <div class="form-column">
-                      <label for="pcode">Product Code</label>
-                      <input type="text" id="pcode" name="pcode" value="1234">
-                  </div>
-              </div>
-          </form>-->
-
-          <?php 
-      	    include 'cadastro_produto.php';
-          ?>
-      </div>
-
-      <div id="entradaContent" class="main-content">
-          <!-- Conteúdo de Entrada -->
-          <form>
-              <div class="form-container">
-                  <div class="form-column">
-                      <label for="entryDate">Entry Date</label>
-                      <input type="date" id="entryDate" name="entryDate">
-                  </div>
-                  <div class="form-column">
-                      <label for="quantity">Quantity</label>
-                      <input type="number" id="quantity" name="quantity" value="0">
-                  </div>
-              </div>
-          </form>
-      </div>
-
-      <div id="saidaContent" class="main-content">
-          <!-- Conteúdo de Saída -->
-          <form>
-              <div class="form-container">
-                  <div class="form-column">
-                      <label for="exitDate">Exit Date</label>
-                      <input type="date" id="exitDate" name="exitDate">
-                  </div>
-                  <div class="form-column">
-                      <label for="quantityOut">Quantity</label>
-                      <input type="number" id="quantityOut" name="quantityOut" value="0">
-                  </div>
-              </div>
-          </form>
-      </div>
-
-
-
-
-
-
-
-  <div class="column middle" style="background-color:#bbb;">dashboard</div>
-  <div class="column side" style="background-color:#ccc;">novidades</div>
-</div>
-
-<div class="footer">
-  <p>um negócio de família</p>
-</div>
-
-
-<script src="script.js"></script>
-          
-        <div class="main-content-container" style="margin-left:20%;">
-            <div id="clientesContent" class="main-content">
-                <!-- Conteúdo de Clientes -->
-                <form>
-                    <div class="form-container">
-                        <div class="form-column">
-                            <label for="fname">Nome completo:</label>
-                            <input type="text" id="nome" name="nome" value="">
-                        </div>
-                        <div class="form-column">
-                            <label for="cpf">CPF:</label>
-                            <input type="text" id="cpf" name="cpf" value="000.000.000-00">
-                        </div>
-                        <div class="form-column">
-                            <label for="dataNasc">Data de nascimento:</label>
-                            <input type="date" id="dataNasc" name="dataNasc">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            
-            <div id="produtosContent" class="main-content">
-                <!-- Conteúdo de Produtos -->
-                <form>
-                    <div class="form-container">
-                        <div class="form-column">
-                            <label for="pname">Product Name</label>
-                            <input type="text" id="pname" name="pname" value="Widget">
-                        </div>
-                        <div class="form-column">
-                            <label for="pcode">Product Code</label>
-                            <input type="text" id="pcode" name="pcode" value="1234">
-                        </div>
-                    </div>
-                </form>
-            </div>
-    
-            <div id="entradaContent" class="main-content">
-                <!-- Conteúdo de Entrada -->
-                <form>
-                    <div class="form-container">
-                        <div class="form-column">
-                            <label for="entryDate">Entry Date</label>
-                            <input type="date" id="entryDate" name="entryDate">
-                        </div>
-                        <div class="form-column">
-                            <label for="quantity">Quantity</label>
-                            <input type="number" id="quantity" name="quantity" value="0">
-                        </div>
-                    </div>
-                </form>
-            </div>
-    
-            <div id="saidaContent" class="main-content">
-                <!-- Conteúdo de Saída -->
-                <form>
-                    <div class="form-container">
-                        <div class="form-column">
-                            <label for="exitDate">Exit Date</label>
-                            <input type="date" id="exitDate" name="exitDate">
-                        </div>
-                        <div class="form-column">
-                            <label for="quantityOut">Quantity</label>
-                            <input type="number" id="quantityOut" name="quantityOut" value="0">
-                        </div>
-                    </div>
-                </form>
-            </div>
         </div>
+
     </div>
-    <script src="script.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
 </body>
+
 </html>
-
-

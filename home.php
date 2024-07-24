@@ -1,192 +1,189 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
-<title>Lider</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<!-- trecho do Pedro -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lider</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<!-- trecho do Pedro até aqui-->
+    <title>CE - Controle de Estoque</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
-<body>
+<body id="page-top">
 
-<h2>Sistema lider</h2>
-<p>Bem vindo ao sistema de controle de negócios, simples e seguro, rápido e fácil</p>
-<p>Controle seu negócio sem burocracia!</p>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
 
-<div class="header">
-  <h2>Lider</h2>
-    <h6>Jesus manso e humilde de coração.Fazei o nosso coração semelhante ao Vosso!</h6>
-</div>
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-<div class="row">
-
-            <div class="column side w3-light-green w3-card">
-                <h4>Menu</h4>
-                <a href="#" class="w3-bar-item w3-button" onclick="hideAllContent()">Home</a>
-                <button class="w3-button w3-block w3-left-align" onclick="toggleSection('cadastroClientes')">Cadastro <i class="fa fa-caret-down"></i></button>
-                <div id="cadastroClientes" class="w3-hide w3-light-green w3-card">
-                    <a href="#" class="w3-bar-item w3-button" onclick="showContent('clientesContent')">Clientes</a>
-                    <a href="#" class="w3-bar-item w3-button" onclick="showContent('produtosContent')">Produtos</a>
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home.php">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <h4>CE</h4>
                 </div>
-                <button class="w3-button w3-block w3-left-align" onclick="toggleSection('estoque')">Estoque <i class="fa fa-caret-down"></i></button>
-                <div id="estoque" class="w3-hide w3-light-green w3-card">
-                    <a href="#" class="w3-bar-item w3-button" onclick="showContent('entradaContent')">Entrada</a>
-                    <a href="#" class="w3-bar-item w3-button" onclick="showContent('saidaContent')">Saída</a>
+                <div class="sidebar-brand-text mx-3">Controle<sup><i class="fa fa-barcode"></i></sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="home.php">
+                    <i class="fa fa-home"></i>
+                    <span>Home</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Menu:
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-book"></i>
+                    <span>Estoque</span></a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fa fa-address-card"></i>
+                    <span>Cadastro</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Cadastrar:</h6>
+                        <a class="collapse-item" onclick="showContent('clientesContent')">Clientes</a>
+                        <a class="collapse-item" href="utilities-border.html">Produtos</a>
+                        <a class="collapse-item" href="utilities-animation.html">Usuários</a>
+                    </div>
                 </div>
-                <a href="#" class="w3-bar-item w3-button" onclick="showContent('listaClienteContent')">Lista Cliente</a>
-            </div>
+            </li>
 
-    <!--<div class="main-content-container" style="margin-left:20%;">-->
-     <!-- Conteúdo de CLIENTES -->
-    <div id="clientesContent" class="main-content">
-         
-          
-          <?php 
-      	    include 'cadastro_cliente.php';
-          ?>
-    </div>
-    
-    <div id="clientesContent" class="main-content">
-          
-          
-          <?php 
-      	    include 'lista_cliente.php';
-          ?>
-    </div>
-    <!-- Conteúdo de Clientes ATÉ AQUI-->
-
-
-      <div id="produtosContent" class="main-content">
-          <!-- Cadastro de Produtos -->
-
-          <?php 
-      	    include 'cadastro_produto.php';
-          ?>
-      </div>
-
-      <div id="entradaContent" class="main-content">
-          <!-- Conteúdo de Entrada -->
-          <form>
-              <div class="form-container">
-                  <div class="form-column">
-                      <label for="entryDate">Entry Date</label>
-                      <input type="date" id="entryDate" name="entryDate">
-                  </div>
-                  <div class="form-column">
-                      <label for="quantity">Quantity</label>
-                      <input type="number" id="quantity" name="quantity" value="0">
-                  </div>
-              </div>
-          </form>
-      </div>
-
-      <div id="saidaContent" class="main-content">
-          <!-- Conteúdo de Saída -->
-          <form>
-              <div class="form-container">
-                  <div class="form-column">
-                      <label for="exitDate">Exit Date</label>
-                      <input type="date" id="exitDate" name="exitDate">
-                  </div>
-                  <div class="form-column">
-                      <label for="quantityOut">Quantity</label>
-                      <input type="number" id="quantityOut" name="quantityOut" value="0">
-                  </div>
-              </div>
-          </form>
-      </div>
-
-
-  <div class="column middle" style="background-color:#bbb;">dashboard</div>
-  <div class="column side" style="background-color:#ccc;">novidades</div>
-</div>
-
-<div class="footer">
-  <p>um negócio de família</p>
-</div>
-
-
-<script src="script.js"></script>
-          
-        <div class="main-content-container" style="margin-left:20%;">
-            <div id="clientesContent" class="main-content">
-                <!-- Conteúdo de Clientes -->
-                <form>
-                    <div class="form-container">
-                        <div class="form-column">
-                            <label for="fname">Nome completo:</label>
-                            <input type="text" id="nome" name="nome" value="">
-                        </div>
-                        <div class="form-column">
-                            <label for="cpf">CPF:</label>
-                            <input type="text" id="cpf" name="cpf" value="000.000.000-00">
-                        </div>
-                        <div class="form-column">
-                            <label for="dataNasc">Data de nascimento:</label>
-                            <input type="date" id="dataNasc" name="dataNasc">
-                        </div>
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fa fa-address-book"></i>
+                    <span>Relatórios</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Consultar:</h6>
+                        <a class="collapse-item" href="buttons.html">Clientes</a>
+                        <a class="collapse-item" href="cards.html">Produtos</a>
+                        <a class="collapse-item" href="cards.html">Usuários</a>
                     </div>
-                </form>
-            </div>
-            
-            <div id="produtosContent" class="main-content">
-                <!-- Conteúdo de Produtos -->
-                <form>
-                    <div class="form-container">
-                        <div class="form-column">
-                            <label for="pname">Product Name</label>
-                            <input type="text" id="pname" name="pname" value="Widget">
-                        </div>
-                        <div class="form-column">
-                            <label for="pcode">Product Code</label>
-                            <input type="text" id="pcode" name="pcode" value="1234">
-                        </div>
+                </div>
+            </li>
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="index.html">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Sair</span>
+                                <i class="fas fa-sign-out-alt"></i>
+                            </a>
+                            
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-4 text-gray-800">Bem-vindo ao seu sistema de controle de estoque</h1>
+                    <!-- Conteúdo de CLIENTES -->    
+                    <div id="clientesContent" class="main-content">  
+                        <?php 
+                            include 'lista_cliente.php';
+                        ?>
                     </div>
-                </form>
-            </div>
-    
-            <div id="entradaContent" class="main-content">
-                <!-- Conteúdo de Entrada -->
-                <form>
-                    <div class="form-container">
-                        <div class="form-column">
-                            <label for="entryDate">Entry Date</label>
-                            <input type="date" id="entryDate" name="entryDate">
-                        </div>
-                        <div class="form-column">
-                            <label for="quantity">Quantity</label>
-                            <input type="number" id="quantity" name="quantity" value="0">
-                        </div>
+                    <!-- Conteúdo de Clientes ATÉ AQUI-->
+                    <div id="produtosContent" class="main-content">
+                        <!-- Cadastro de Produtos -->
+                        <?php 
+                            include 'cadastro_produto.php';
+                        ?>
                     </div>
-                </form>
+
+                </div>
+                <!-- /.container-fluid -->
+
             </div>
-    
-            <div id="saidaContent" class="main-content">
-                <!-- Conteúdo de Saída -->
-                <form>
-                    <div class="form-container">
-                        <div class="form-column">
-                            <label for="exitDate">Exit Date</label>
-                            <input type="date" id="exitDate" name="exitDate">
-                        </div>
-                        <div class="form-column">
-                            <label for="quantityOut">Quantity</label>
-                            <input type="number" id="quantityOut" name="quantityOut" value="0">
-                        </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
                     </div>
-                </form>
-            </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
         </div>
+        <!-- End of Content Wrapper -->
+
     </div>
-    <script src="script.js"></script>
+    <!-- End of Page Wrapper -->
+
+    
+   
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
 </body>
+
 </html>
-
-
