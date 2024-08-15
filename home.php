@@ -72,9 +72,9 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Cadastrar:</h6>
-                        <a class="collapse-item" onclick="showContent('clientesContent')">Clientes</a>
-                        <a class="collapse-item" href="utilities-border.html">Produtos</a>
-                        <a class="collapse-item" href="utilities-animation.html">Usuários</a>
+                        <a class="collapse-item" href="#" onclick="showContent('cadastrocliente')">Clientes</a>
+                        <a class="collapse-item" href="#" onclick="showContent('produtosContent')">Produtos</a>
+                        <a class="collapse-item" href="#" onclick="showContent('cadastroUsuario')">Usuários</a>
                     </div>
                 </div>
             </li>
@@ -106,14 +106,9 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
                     
-
-                    <!-- Topbar Navbar -->
+                <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
-                        
-
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
@@ -121,36 +116,39 @@
                             <a class="nav-link dropdown-toggle" href="index.html">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Sair</span>
                                 <i class="fas fa-sign-out-alt"></i>
-                            </a>
-                            
+                            </a> 
                         </li>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
+                <!-- Dentro da pagina principal -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
+                    <!-- Cadastros -->
                     <h1 class="h3 mb-4 text-gray-800">Bem-vindo ao seu sistema de controle de estoque</h1>
+
                     <!-- Conteúdo de CLIENTES -->    
-                    <div id="clientesContent" class="main-content">  
-                        <?php 
-                            include 'lista_cliente.php';
-                        ?>
+                    <div id="cadastrocliente" class="main-content" style="display: none;">
+                        <!-- Cadastro de Clientes -->
+                        <?php include 'cadastro_cliente.php'; ?>
                     </div>
-                    <!-- Conteúdo de Clientes ATÉ AQUI-->
-                    <div id="produtosContent" class="main-content">
+                    <!-- Conteúdo de Produtos -->
+                    <div id="produtosContent" class="main-content" style="display: none;">
                         <!-- Cadastro de Produtos -->
                         <?php 
                             include 'cadastro_produto.php';
                         ?>
                     </div>
-
+                    <!-- Conteúdo de Usuários -->
+                    <div id="cadastroUsuario" class="main-content" style="display: none;">
+                        <!-- Cadastro de Produtos -->
+                        <?php 
+                            include 'cadastro_User.php';
+                        ?>
+                    </div>
                 </div>
-                <!-- /.container-fluid -->
+                
 
             </div>
             <!-- End of Main Content -->
@@ -170,11 +168,8 @@
 
     </div>
     <!-- End of Page Wrapper -->
-
-    
-   
-
     <!-- Bootstrap core JavaScript-->
+    <script src="script.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
