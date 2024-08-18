@@ -89,7 +89,9 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Consultar:</h6>
-                        <a class="collapse-item" href="buttons.html">Clientes</a>
+                        
+                        <a class="collapse-item" href="#" onclick="showContent('listaClientes')">Clientes</a>
+                        
                         <a class="collapse-item" href="cards.html">Produtos</a>
                         <a class="collapse-item" href="cards.html">Usuários</a>
                     </div>
@@ -145,6 +147,13 @@
                         <!-- Cadastro de Produtos -->
                         <?php 
                             include 'cadastro_User.php';
+                        ?>
+                    </div>
+                    <!-- lista de clientes -->
+                    <div id="listaClientes" class="main-content" style="display: none;">
+                        <!-- lista Clientes -->
+                        <?php 
+                            include 'lista_cliente.php';
                         ?>
                     </div>
                 </div>

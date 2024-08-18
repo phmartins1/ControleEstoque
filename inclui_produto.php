@@ -18,7 +18,7 @@ $prod_qtd               = 0;
         $sql = " INSERT INTO produto(produto, prod_custo, prod_venda, unidade_medida, prod_ativo, quantidade) 
                 values ('$prod_descricao', '$prod_custo', '$prod_venda', '$prod_medida', '$prod_ativo', '$prod_qtd') ";
         
-        var_dump($sql);
+        //var_dump($sql);
 
         mysqli_query($link, $sql);
 
