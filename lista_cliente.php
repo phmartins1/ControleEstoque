@@ -71,13 +71,19 @@
      <!-- NOVA TENTATIVA FORMULARIO -->
      <div class="cad_cliente container-contact100" name="edit-cliente">
       <div class="wrap-contact100">
-        <form method="POST" action="altera_cliente.php" class="contact100-form validate-form">
+        <form id="edit-form" action="altera_cliente.php" method="POST" class="contact100-form validate-form">
+            <!--//action="altera_cliente.php" -->
           <span class="contact100-form-title">
             Cadastro de Cliente
           </span>
           <div style="width:60%;" class="card mb-4 py-3 border-left-dark">
-            <p id="edit-id"></p>
+            
             <div class="marg1">
+              <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="id_cliente">
+                <span class="label-input100">id: </span><br>
+                <input class="input100" type="text" name="id_cliente" id="edit-id">
+              </div>
+
               <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Celular">
                 <span class="label-input100">Celular: *</span><br>
                 <input class="input100" type="text" name="cli_celular" id="edit-celular">
@@ -99,7 +105,6 @@
               </div>
             </div>
           </div>
-          <br><br><br>
     <!-- ATIVAR ESTES CAMPOS COMO OPÇÃO DE EDIÇÃO COMPLETA
           <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "um telefone">
             <span class="label-input100">Telefone: </span><br>
@@ -229,13 +234,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-//codigo para enviar a gravação com Ajax
-document.getElementById('editForm').onsubmit = function(event) {
+//codigo para enviar a gravação com Ajax 
+/* desativado pois não mostra o erro
+document.getElementById('edit-Form').onsubmit = function(event) {
     event.preventDefault();
 
     var formData = new FormData(this);
 
-    fetch('atualizar.php', {
+    fetch('altera_cliente.php', {
         method: 'POST',
         body: formData
     }).then(response => response.text())
@@ -245,5 +251,5 @@ document.getElementById('editForm').onsubmit = function(event) {
       }).catch(error => {
           console.error('Erro:', error);
       });
-};
+};*/
 </script>

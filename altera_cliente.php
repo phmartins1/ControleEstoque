@@ -1,19 +1,32 @@
 <?php
-include 'conexao.php'; // seu arquivo de conexão ao banco de dados
+
+require_once('db.class.php');
+
+$objDb = new db();
+$link = $objDb->conecta_mysql();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST['id_clinte'];
+    $id = $_POST['id_cliente'];
     $fantasia = $_POST['cli_fantasia'];
     $celular = $_POST['cli_celular'];
+    $razao = $_POST['cli_razao'];
+    $telefone = $_POST['cli_telefone'];
 
-    $sql = "UPDATE tabela SET nome='$fantasia', email='$celular' WHERE id=$id";
+    $sql = "UPDATE cliente SET 
+    cli_fantasia='$fantasia', 
+    cli_celular='$celular', 
+    cli_razao='$razao',
+    cli_telefone='$telefone' 
+    WHERE id_cliente=$id";
 
-    if (mysqli_query($conn, $sql)) {
+    var_dump($sql);
+
+    if (mysqli_query($link, $sql)) {
         echo "Registro atualizado com sucesso!";
     } else {
-        echo "Erro ao atualizar o registro: " . mysqli_error($conn);
+        echo "Erro ao atualizar o registro: " . mysqli_error($link);
     }
-
-    mysqli_close($conn);
+   
+    mysqli_close($link);
 }
 ?>
