@@ -10,23 +10,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fantasia = $_POST['cli_fantasia'];
     $celular = $_POST['cli_celular'];
     $razao = $_POST['cli_razao'];
-    $telefone = $_POST['cli_telefone'];
+    
 
     $sql = "UPDATE cliente SET 
     cli_fantasia='$fantasia', 
     cli_celular='$celular', 
-    cli_razao='$razao',
-    cli_telefone='$telefone' 
+    cli_razao='$razao'
     WHERE id_cliente=$id";
 
     var_dump($sql);
 
     if (mysqli_query($link, $sql)) {
         echo "Registro atualizado com sucesso!";
+        mysqli_close($link);
+        header('Location: home.php?erro=9');
     } else {
         echo "Erro ao atualizar o registro: " . mysqli_error($link);
+        mysqli_close($link);
     }
    
-    mysqli_close($link);
+    
+
 }
 ?>
