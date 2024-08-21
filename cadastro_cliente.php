@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 
-		<title>BLZ - Cad.Usuários</title>
+		<title>CE - Cadastro Cliente</title>
 		
 		<link href="estilo.css" rel="stylesheet">
     <style>

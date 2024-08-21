@@ -92,8 +92,8 @@
                         
                         <a class="collapse-item" href="#" onclick="showContent('listaClientes')">Clientes</a>
                         
-                        <a class="collapse-item" href="cards.html">Produtos</a>
-                        <a class="collapse-item" href="cards.html">Usuários</a>
+                        <a class="collapse-item" href="#">Produtos</a>
+                        <a class="collapse-item" href="#">Usuários</a>
                     </div>
                 </div>
             </li>
@@ -144,7 +144,7 @@
                     </div>
                     <!-- Conteúdo de Usuários -->
                     <div id="cadastroUsuario" class="main-content" style="display: none;">
-                        <!-- Cadastro de Produtos -->
+                        <!-- Cadastro de user -->
                         <?php 
                             include 'cadastro_User.php';
                         ?>

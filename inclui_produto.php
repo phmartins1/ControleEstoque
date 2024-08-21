@@ -2,7 +2,6 @@
 
 require_once('db.class.php');
 
-
 $prod_descricao		= $_POST['prod_descricao'];
 $prod_custo		= $_POST['prod_custo'];
 $prod_venda             = $_POST['prod_venda'];
@@ -14,15 +13,15 @@ $prod_qtd               = 0;
         $objDb = new db();
         $link = $objDb->conecta_mysql();
 
-        //gravando Servico
+        //gravando Produto
         $sql = " INSERT INTO produto(produto, prod_custo, prod_venda, unidade_medida, prod_ativo, quantidade) 
                 values ('$prod_descricao', '$prod_custo', '$prod_venda', '$prod_medida', '$prod_ativo', '$prod_qtd') ";
         
-        //var_dump($sql);
+        var_dump($sql);
 
         mysqli_query($link, $sql);
 
-       
-        header('Location: home.php?erro=1');
-        
+        mysqli_close($link);
+        //header('Location: home.php?erro=1');
+         
 ?>

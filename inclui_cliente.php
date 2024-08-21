@@ -37,9 +37,11 @@
 			$sql = " INSERT INTO cliente( cli_celular, cli_fantasia, cli_razao, cli_nome, cli_telefone, cli_email, cli_cep, cli_endereco, cli_end_numero, cli_end_bairro, cli_cidade, cli_uf, cli_complemento, cli_data_nascimento, cli_ativo)
 								VALUES ('$cli_celular', '$cli_fantasia', '$cli_razao', '$cli_nome', '$cli_telefone', '$cli_email', '$cli_cep', '$cli_endereco', '$cli_end_numero', '$cli_end_bairro', '$cli_cidade', '$cli_estado', '$cli_complemento', '$data', $cli_ativo) ";
 			
-			//var_dump($sql);
+			var_dump($sql);
 			mysqli_query($link, $sql);
 
-			header('Location: home.php?erro=1');
+			mysqli_close($link);
+
+			//header('Location: home.php?erro=9');
 
 ?>

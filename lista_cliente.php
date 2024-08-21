@@ -17,7 +17,7 @@
 	//$usuario = $_SESSION['usuario'];
 	$exibir_inativo = 'none';
 
-    $objDb = new db();
+  $objDb = new db();
 	$link = $objDb->conecta_mysql();
 
 	//lista de clientes

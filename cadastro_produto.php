@@ -1,6 +1,6 @@
   <div class="cad_prof container-contact100" name="produtos">
     <div class="wrap-contact100">
-        <form method="POST" class="contact100-form validate-form" action="inclui_produto.php">
+        <form method="POST" class="contact100-form validate-form" action="/inclui_produto.php">
         <span class="contact100-form-title">
           Cadastro de Produtos
         </span>
@@ -26,12 +26,12 @@
         </div>
      
         <div class="container-contact100-form-btn">
-          <button class="contact100-form-btn">
+          <input class="contact100-form-btn" type="submit">
             <span>
               Salvar
               <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
             </span>
-          </button>
+          </input>
         </div>
       </div>
     </form>
